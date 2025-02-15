@@ -83,7 +83,8 @@ class Pg5 : AppCompatActivity() {
         val notificationManager=NotificationManagerCompat.from(this)
         btnBookRide.setOnClickListener {
             notificationManager.notify(notification_id,builder)
-            Intent(this,Pg6_BookRide::class.java)
+            val intent=Intent(this,Pg6_BookRide::class.java)
+            startActivity(intent)
         }
     }
     fun bookRide(){
