@@ -32,6 +32,6 @@ class MainActivity : AppCompatActivity() {
                 finishAffinity()
             },4000)
         }
-
+        println("jdndjsnijsnsnbobnsonsnon ok nson ")
     }
 }
