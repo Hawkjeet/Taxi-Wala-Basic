@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Bike"
+        android:id="@+id/BikeNavBar"
+        android:icon="@drawable/bikelogo"/>
+    <item android:title="Rickshaw"
+        android:id="@+id/RickNavBar"
+        android:icon="@drawable/rickshawlogo"/>
+    <item android:title="Car"
+        android:id="@+id/CarNavBar"
+        android:icon="@drawable/carlogo"/>
+</menu>

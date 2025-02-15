@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register_Pg4"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/backbutton"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:layout_marginLeft="20dp"
+        android:textSize="32dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Glad to see"
+        android:layout_marginLeft="20dp"
+        android:textSize="32dp"
+        android:textStyle="bold"/>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/userReg"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:hint="Enter your username"
+        android:textColor="#8391A1"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:paddingStart="15dp"
+        android:background="@drawable/lgn_btn"/>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/mailReg"
+        android:textAllCaps="false"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:hint="Enter your mail"
+        android:textColor="#8391A1"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:paddingStart="15dp"
+        android:background="@drawable/lgn_btn"/>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/passReg"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:hint="Enter your password"
+        android:textColor="#8391A1"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:paddingStart="15dp"
+        android:background="@drawable/lgn_btn"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:textAllCaps="false"
+        android:id="@+id/register"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:text="Register"
+        android:textSize="15dp"
+        android:background="@drawable/login_button"
+        android:layout_gravity="center"
+        android:layout_marginTop="45dp"
+        android:backgroundTint="#FFBE26"/>
+
+</LinearLayout>
