@@ -23,7 +23,7 @@ class Pg5 : AppCompatActivity() {
     val channel_name="Channel_Name"
     val notification_id=0
     lateinit var rv:RecyclerView
-    lateinit var profile:ArrayList<profiles>
+    lateinit var profile:ArrayList<profiles> // Profiles is a data class which takes name,img and number of rides
     @SuppressLint("MissingPermission")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,7 +58,7 @@ class Pg5 : AppCompatActivity() {
             profile.add(toadd)
         }
         rv.layoutManager=LinearLayoutManager(this)
-        var myadapter=MyAdapter(this,profile)
+        var myadapter=MyAdapter(this,profile) // Now we create an adapter for recycler view
         rv.adapter=myadapter
         myadapter.setItem(object:MyAdapter.ItemClickListener{
             override fun onItemClick(position: Int) {
@@ -86,6 +86,12 @@ class Pg5 : AppCompatActivity() {
             val intent=Intent(this,Pg6_BookRide::class.java)
             startActivity(intent)
         }
+        val navComp=findViewById<AppCompatButton>(R.id.toNavComp)
+        navComp.setOnClickListener {
+            val intent=Intent(this,Nav_Components::class.java)
+            startActivity(intent)
+        }
+
     }
     fun bookRide(){
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){

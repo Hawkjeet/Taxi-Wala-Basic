@@ -4,3 +4,13 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android) apply false
     alias(libs.plugins.google.gms.google.services) apply false
 }
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Directly add the Safe Args plugin classpath with version specified
+        classpath ("androidx.navigation:navigation-safe-args-gradle-plugin:2.5.0") // Latest stable version
+    }
+}

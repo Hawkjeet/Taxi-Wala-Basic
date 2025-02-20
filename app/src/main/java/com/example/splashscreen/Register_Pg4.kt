@@ -41,6 +41,7 @@ class Register_Pg4 : AppCompatActivity() {
             val email=Mail.text.toString()
             val password=Pass.text.toString()
             database=FirebaseDatabase.getInstance().getReference("Users")
+            // user is a data class which takes userid,email,pw
             database.child(userid).setValue(user(userid,email,password)).addOnSuccessListener {
                 Toast.makeText(applicationContext,"Registered",Toast.LENGTH_SHORT).show()
                 val intentwel=Intent(this,Pg3_login::class.java)

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_graph"
+    app:startDestination="@id/fragmentFirst">
+
+    <fragment
+        android:id="@+id/fragmentFirst"
+        android:name="com.example.splashscreen.fragmentFirst"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/first_to_KnowMore"
+            app:destination="@id/fragmentKnowMore"
+            app:enterAnim="@android:anim/bounce_interpolator"
+            app:exitAnim="@android:anim/cycle_interpolator" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentKnowMore"
+        android:name="com.example.splashscreen.fragmentKnowMore"
+        android:label="fragment_know_more"
+        tools:layout="@layout/fragment_know_more" >
+        <action
+            android:id="@+id/KnowMore_to_first"
+            app:destination="@id/fragmentFirst"
+            app:enterAnim="@android:anim/linear_interpolator"
+            app:exitAnim="@android:anim/overshoot_interpolator" />
+        <argument
+            android:name="string"
+            app:argType="string"
+            android:defaultValue="About us" />
+    </fragment>
+</navigation>

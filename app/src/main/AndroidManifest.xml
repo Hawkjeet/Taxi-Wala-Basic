@@ -15,6 +15,12 @@
         android:theme="@style/Theme.SplashScreen"
         tools:targetApi="31">
         <activity
+            android:name=".Nav_Components"
+            android:exported="false" />
+        <activity
+            android:name=".NavComp"
+            android:exported="false" />
+        <activity
             android:name=".Pg6_BookRide"
             android:exported="false" />
         <activity

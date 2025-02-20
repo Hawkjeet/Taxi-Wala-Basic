@@ -64,14 +64,14 @@ class Pg3_login : AppCompatActivity() {
             startActivity(intentreg)
         }
 
-        Notify()
-        val builder=NotificationCompat.Builder(this,channel_Id)
+        Notify() // This function makes the channel for notification
+        val builder=NotificationCompat.Builder(this,channel_Id) // This is the builder of notification
             .setContentTitle("Login Successfully")
             .setContentText("Ready to Book your Ride")
             .setSmallIcon(R.drawable.person)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .build()
-        val manager=NotificationManagerCompat.from(this)
+        val manager=NotificationManagerCompat.from(this) // This is the manager for Notification
             if(userid.isNotEmpty() && pw.isNotEmpty()){
                 readata(userid,pw,manager,builder)
                 pwlgn.text?.clear()
@@ -84,7 +84,7 @@ class Pg3_login : AppCompatActivity() {
 
     @SuppressLint("MissingPermission")
     private fun readata(userid:String, pw:String, manager: NotificationManagerCompat, builder:Notification ){
-        database=FirebaseDatabase.getInstance().getReference("Users")
+        database=FirebaseDatabase.getInstance().getReference("Users") // Taking reference of database from Users
         database.child(userid).get().addOnSuccessListener {
             if(it.exists()){
                 val password=it.child("pass").value
