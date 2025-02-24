@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SplashScreen"
+rootProject.name = "Taxi Wala"
 include(":app")
  
