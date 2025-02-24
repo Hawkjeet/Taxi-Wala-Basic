@@ -15,6 +15,9 @@
         android:theme="@style/Theme.SplashScreen"
         tools:targetApi="31">
         <activity
+            android:name=".ViewPagerActivity"
+            android:exported="false" />
+        <activity
             android:name=".Nav_Components"
             android:exported="false" />
         <activity
